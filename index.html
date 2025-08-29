@@ -29,7 +29,7 @@
       color: white;      /* text color */
       text-shadow: 2px 2px 5px black; /* make it pop */
   position: absolute;
-  top: 20%;   /* was 50%, move higher */
+  top: 4.5%;   /* was 50%, move higher */
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -48,6 +48,16 @@
       width: 30px;
       height: 30px;
     }
+
+    #center-img {
+  position: absolute;
+  top: 20%;              /* place it under the text (adjust %) */
+  left: 50%;
+  transform: translateX(-50%); /* only center horizontally */
+  width: 400px;          /* adjust size */
+  height: auto;          /* keeps aspect ratio */
+  opacity: 0.7;    
+}
   </style>
 </head>
 <body>
@@ -60,6 +70,7 @@
 
   <!-- Centered text -->
   <h1>GIZZ DEMOTED</h1>
+  <img id="center-img" src="Gizz inting.png" alt="Picture">
 
   <!-- Two buttons stacked in the same spot -->
   <button id="play-btn" class="music-btn" style="display:none;">
