@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adem Salah</title>
+  <style>
+    body {
+      background-image: url('elden ring wallpeper.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    /* Music control buttons */
+    .music-btn {
+      position: fixed;
+      bottom: 10px;
+      right: 15px;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .music-btn img {
+      width: 30px;  
+      height: 30px;  
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background music -->
+  <audio id="bg-music" autoplay loop>
+    <source src="coralfrankocean.mp3" type="audio/mpeg">
+    Your browser does not support audio.
+  </audio>
+
+  <!-- Two buttons stacked in the same spot -->
+  <button id="play-btn" class="music-btn" style="display:none;">
+    <img src="play.png" alt="Play">
+  </button>
+
+  <button id="pause-btn" class="music-btn">
+    <img src="pause.png" alt="Pause">
+  </button>
+
+  <script>
+    const music = document.getElementById("bg-music");
+    const playBtn = document.getElementById("play-btn");
+    const pauseBtn = document.getElementById("pause-btn");
+
+    // Try autoplay
+    music.play().catch(() => {
+      playBtn.style.display = "block";
+      pauseBtn.style.display = "none";
+    });
+
+    playBtn.addEventListener("click", () => {
+      music.play();
+      playBtn.style.display = "none";
+      pauseBtn.style.display = "block";
+    });
+
+    pauseBtn.addEventListener("click", () => {
+      music.pause();
+      playBtn.style.display = "block";
+      pauseBtn.style.display = "none";
+    });
+  </script>
+
+</body>
+</html>
