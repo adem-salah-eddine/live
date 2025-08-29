@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Adem Salah</title>
+  
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  
   <style>
     body {
       background-image: url('elden ring wallpeper.png');
@@ -11,7 +15,24 @@
       background-repeat: no-repeat;
       background-position: center;
       background-attachment: fixed;
+      margin: 0;
+      height: 100vh; /* full screen height */
+      display: flex;
+      justify-content: center; /* horizontal center */
+      align-items: center;     /* vertical center */
     }
+
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 64px;   /* make it big */
+      font-weight: 700;  /* bold */
+      color: white;      /* text color */
+      text-shadow: 2px 2px 5px black; /* make it pop */
+  position: absolute;
+  top: 20%;   /* was 50%, move higher */
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
     /* Music control buttons */
     .music-btn {
@@ -24,8 +45,8 @@
     }
 
     .music-btn img {
-      width: 30px;  
-      height: 30px;  
+      width: 30px;
+      height: 30px;
     }
   </style>
 </head>
@@ -36,6 +57,9 @@
     <source src="coralfrankocean.mp3" type="audio/mpeg">
     Your browser does not support audio.
   </audio>
+
+  <!-- Centered text -->
+  <h1>GIZZ DEMOTED</h1>
 
   <!-- Two buttons stacked in the same spot -->
   <button id="play-btn" class="music-btn" style="display:none;">
